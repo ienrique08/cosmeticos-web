@@ -1,0 +1,36 @@
+.catalogo {
+  padding: 2rem;
+  text-align: center;
+}
+
+.productos-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 250px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #d87f03;
+  margin-top: 0.5rem;
+}

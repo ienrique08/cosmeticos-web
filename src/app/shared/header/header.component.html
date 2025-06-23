@@ -1,0 +1,42 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<header class="navbar">
+  <div class="container">
+    <div class="logo"> VELLA VITA</div>
+    <nav class="menu">
+      <a routerLink="/">Inicio</a>
+  <a routerLink="/quienes-somos">Quiénes Somos</a>
+  <a routerLink="/productos">Productos</a>
+  <a routerLink="/contacto">Contacto</a>
+<a *ngIf="auth.estaAutenticado()" routerLink="/admin/agregar-producto">Agregar Producto</a>
+<a *ngIf="auth.estaAutenticado()" (click)="logout()">Cerrar sesión</a>
+ <a routerLink="/carrito">
+  <i class="fa fa-shopping-cart" style="margin-right:8px;"></i>
+  Ver carrito
+</a>
+<!--  <a *ngIf="!auth.estaAutenticado()" routerLink="/login">Admin</a>
+ -->
+    </nav>
+    <div class="extras">
+      <button class="donate">Contacto</button>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Aquí puedes agregar cualquier script adicional si es necesariolet lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scroll hacia abajo: oculta header
+    navbar.style.top = '-100px';
+  } else {
+    // Scroll hacia arriba: muestra header
+    navbar.style.top = '0';
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+</script>

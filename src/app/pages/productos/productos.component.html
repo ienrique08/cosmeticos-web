@@ -1,0 +1,13 @@
+<div class="productos-grid">
+  <div class="producto" *ngFor="let item of productos">
+    <img [src]="'http://localhost:3000/uploads/' + item.imagen" alt="Imagen del producto">
+    <p>{{ item.nombre }}</p>
+    <p>{{ item.descripcion }}</p>
+    <p class="precio">${{ item.precio }}</p>
+    <button>Ver más</button>
+    <!-- Input para cantidad -->
+<input type="number" min="1" [(ngModel)]="item.cantidadSeleccionada" style="width:60px" />    <button (click)="agregarAlCarrito(item, item.cantidadSeleccionada || 1)">Agregar al carrito</button>
+    <button *ngIf="auth.estaAutenticado()" (click)="eliminarProducto(item.id)">Eliminar</button>
+    <a *ngIf="auth.estaAutenticado()" [routerLink]="['/editar-producto', item.id]">Editar</a>
+  </div>
+</div>

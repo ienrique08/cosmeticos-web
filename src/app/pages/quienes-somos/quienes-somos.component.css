@@ -1,0 +1,105 @@
+.quienes-somos {
+  padding: 60px 20px;
+  background-color: #fdfaf4;
+  color: #333;
+  text-align: center;
+}
+
+.quienes-somos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.quienes-somos .intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 300px;
+  text-align: left;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #d4a21b;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.texto {
+  flex: 1 1 500px;
+}
+
+.imagen {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.imagen img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.boton-folleto {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.btn-descargar {
+  display: inline-block;
+  background-color: #d4a21b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+  background-color: #b68b12;
+}
+
+
+.boton-folleto a + a {
+  margin-left: 10px;
+}
+
+.btn-descargar.secondary {
+  background-color: #666;
+}
+
+.btn-descargar.secondary:hover {
+  background-color: #444;
+}

@@ -1,0 +1,78 @@
+.navbar {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+.menu a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+.menu a:hover {
+  color: #d4a21b;
+}
+
+.extras {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge {
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: right;
+  color: #333;
+}
+
+
+.donate {
+  background-color: #ffc107;
+  border: none;
+  padding: 8px 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login-form {
+  position: -webkit-sticky;
+  top: 60px;
+  right: 20px;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-form input {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: 200px;
+}
+

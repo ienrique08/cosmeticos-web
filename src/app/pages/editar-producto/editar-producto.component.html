@@ -1,0 +1,7 @@
+<form *ngIf="productoForm" [formGroup]="productoForm" (ngSubmit)="editarProducto()" enctype="multipart/form-data">
+  <input formControlName="nombre" placeholder="Nombre del producto" required>
+  <textarea formControlName="descripcion" placeholder="Descripción" required></textarea>
+  <input formControlName="precio" type="number" placeholder="Precio" required>
+  <input type="file" (change)="onFileSelected($event)">
+  <button type="submit">Guardar cambios</button>
+</form>

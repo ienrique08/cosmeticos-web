@@ -1,0 +1,10 @@
+<form [formGroup]="productoForm" (ngSubmit)="agregarProducto()" enctype="multipart/form-data">
+  <input formControlName="nombre" placeholder="Nombre del producto" required>
+  <textarea formControlName="descripcion" placeholder="Descripción" required></textarea>
+  <input formControlName="precio" type="number" placeholder="Precio" required>
+
+  <!-- Campo para subir archivo -->
+  <input type="file" (change)="onFileSelected($event)" required>
+
+  <button type="submit">Agregar producto</button>
+</form>
